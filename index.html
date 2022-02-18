@@ -6,6 +6,47 @@
     <link rel="stylesheet" href="./dist/style.css" />
     <title>Todo</title>
   </head>
-  <body></body>
+  <body>
+    <img src="./images/bg-desktop-light.jpg" alt="background" class="bg" />
+    <main class="container flex flex-jc-c">
+      <section class="data flex flex-jc-c flex-column">
+        <div class="data__header flex flex-jc-sb flex-ai-c">
+          <h1>TODO</h1>
+          <img src="./images/icon-moon.svg" alt="moon-icon" />
+        </div>
+        <div class="data__create flex flex-ai-c">
+          <div class="checkBox">
+            <img src="./images/icon-check.svg" alt="check" />
+          </div>
+          <input
+            type="text"
+            class="createTask"
+            placeholder="Create a new todo ..."
+          />
+        </div>
+        <div class="data__list">
+          <ul class="todo-list">
+            <li class="flex flex-ai-c">
+              <div class="checkBox">
+                <img src="./images/icon-check.svg" alt="check" />
+              </div>
+              <h2>Welcome to todo list :)</h2>
+            </li>
+          </ul>
+          <div class="controlCenter flex flex-ai-c flex-jc-sb">
+            <p>5 items left</p>
+            <div class="category flex flex-ai-c">
+              <p>All</p>
+              <p>Active</p>
+              <p>Completed</p>
+            </div>
+            <p>Clear Completed</p>
+          </div>
+        </div>
+
+        <p>Drag and drop to reorder list</p>
+      </section>
+    </main>
+  </body>
   <script src="./app/js/main.js"></script>
 </html>

@@ -1,0 +1,161 @@
+.data {
+  max-width: 540px;
+  width: 100%;
+
+  text-align: center;
+
+  &:last-child {
+    p {
+      color: $darkGrayishBlue;
+    }
+  }
+
+  &__header {
+    margin-bottom: 50px;
+    h1 {
+      color: white;
+
+      font-size: 40px;
+      letter-spacing: 15px;
+    }
+
+    img:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__create {
+    background-color: white;
+
+    padding: 20px 24px;
+    margin-bottom: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+    input {
+      width: 85%;
+
+      border: none;
+      font-size: 18px;
+      font-family: "Josefin Sans";
+
+      outline: none;
+
+      caret-color: $brightBlue;
+      color: $veryDarkGrayishBlue;
+
+      &::placeholder {
+        font-size: 18px;
+
+        font-family: "Josefin Sans";
+      }
+    }
+  }
+
+  &__list {
+    max-height: 440px;
+    height: 100%;
+
+    border-radius: 8px;
+    margin-bottom: 50px;
+
+    background-color: white;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+    ul {
+      height: 390px;
+
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    li {
+      padding: 20px 24px;
+
+      border-bottom: 1px solid $veryLightGrayishBlue;
+
+      h2 {
+        color: $veryDarkGrayishBlue;
+
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.controlCenter {
+  padding: 20px 24px;
+
+  border-top: 1px solid $veryLightGrayishBlue;
+
+  p {
+    color: $darkGrayishBlue;
+    font-size: 12px;
+    font-weight: 700;
+
+    &:hover {
+      &:last-child {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .category {
+    p {
+      &:first-child {
+        color: $brightBlue;
+      }
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    p:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.checkBox {
+  margin-right: 24px;
+
+  position: relative;
+  border-radius: 50%;
+
+  border: 2px solid $veryLightGrayishBlue;
+
+  width: 25px;
+  height: 25px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+  }
+
+  &-active {
+    background-image: linear-gradient(
+      145deg,
+      hsl(192, 100%, 67%),
+      hsl(280, 87%, 65%)
+    );
+    border: none;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+.checkBox:hover {
+  cursor: pointer;
+}
