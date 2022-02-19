@@ -25,6 +25,14 @@
   }
 
   &__create {
+    &-dark {
+      background-color: $veryDarkDesaturatedBlue;
+
+      input {
+        color: $lightGrayishBlue !important;
+      }
+    }
+
     background-color: white;
 
     padding: 20px 24px;
@@ -36,6 +44,8 @@
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 
     input {
+      background: transparent;
+
       width: 85%;
 
       border: none;
@@ -56,6 +66,18 @@
   }
 
   &__list {
+    &-dark {
+      background-color: $veryDarkDesaturatedBlue;
+
+      h2 {
+        color: $lightGrayishBlue !important;
+      }
+
+      li {
+        border-color: rgba(255, 255, 255, 0.192) !important;
+      }
+    }
+
     max-height: 440px;
     height: 100%;
 
@@ -85,11 +107,19 @@
         font-size: 18px;
         font-weight: 400;
       }
+
+      h2:hover {
+        cursor: pointer;
+      }
     }
   }
 }
 
 .controlCenter {
+  &-dark {
+    border-color: rgba(255, 255, 255, 0.192) !important;
+  }
+
   padding: 20px 24px;
 
   border-top: 1px solid $veryLightGrayishBlue;
@@ -122,7 +152,38 @@
   }
 }
 
+.mobile-category {
+  &-dark {
+    background-color: $veryDarkDesaturatedBlue;
+  }
+
+  display: none;
+
+  border-radius: 8px;
+
+  padding: 16px 20px;
+  margin-bottom: 48px;
+
+  background-color: white;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+  p {
+    &:first-child {
+      color: $brightBlue;
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
 .checkBox {
+  &-dark {
+    border-color: $darkGrayishBlue !important;
+  }
+
   margin-right: 24px;
 
   position: relative;
@@ -158,4 +219,83 @@
 
 .checkBox:hover {
   cursor: pointer;
+}
+
+.removeBtn {
+  display: none;
+}
+
+.removeBtn:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .data {
+    &__header {
+      margin-bottom: 40px;
+      h1 {
+        font-size: 30px;
+      }
+
+      img {
+        height: 20px;
+      }
+    }
+
+    &__create {
+      padding: 16px 20px;
+
+      input {
+        font-size: 14px;
+
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__list {
+      ul {
+        height: 320px;
+      }
+      li {
+        padding: 16px 20px;
+
+        h2 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .controlCenter {
+    .category {
+      display: none;
+    }
+  }
+
+  .mobile-category {
+    display: flex;
+  }
+
+  .checkBox {
+    height: 20px;
+    width: 20px;
+  }
+
+  .removeBtn {
+    display: block;
+
+    width: 10px;
+  }
+}
+
+.data {
+  &__list {
+    li:hover {
+      .removeBtn {
+        display: block;
+      }
+    }
+  }
 }

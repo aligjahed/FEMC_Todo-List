@@ -6,6 +6,8 @@ html {
   font-size: 100%;
 
   user-select: none;
+
+  overflow-x: hidden;
 }
 
 *,
@@ -80,4 +82,20 @@ ul {
   position: relative;
 
   padding: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 48px 22px;
+  }
+
+  .bg {
+    content: url(../../images/bg-mobile-light.jpg);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .bg {
+    content: url(../../images/bg-desktop-light.jpg);
+  }
 }

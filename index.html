@@ -7,15 +7,15 @@
     <title>Todo</title>
   </head>
   <body>
-    <img src="./images/bg-desktop-light.jpg" alt="background" class="bg" />
+    <img src="#" alt="background" class="bg" />
     <main class="container flex flex-jc-c">
       <section class="data flex flex-jc-c flex-column">
         <div class="data__header flex flex-jc-sb flex-ai-c">
           <h1>TODO</h1>
-          <img src="./images/icon-moon.svg" alt="moon-icon" />
+          <img src="./images/icon-moon.svg" alt="moon-icon" class="mood-icon" />
         </div>
         <div class="data__create flex flex-ai-c">
-          <div class="checkBox">
+          <div class="checkBox" id="createTodo">
             <img src="./images/icon-check.svg" alt="check" />
           </div>
           <input
@@ -26,15 +26,23 @@
         </div>
         <div class="data__list">
           <ul class="todo-list">
-            <li class="flex flex-ai-c">
-              <div class="checkBox">
-                <img src="./images/icon-check.svg" alt="check" />
+            <li class="flex flex-ai-c flex-jc-sb">
+              <div class="todoObject flex flex-ai-c">
+                <div class="checkBox">
+                  <img src="./images/icon-check.svg" alt="check" />
+                </div>
+                <h2>Welcome to todo list :)</h2>
               </div>
-              <h2>Welcome to todo list :)</h2>
+              <img
+                src="./images/icon-cross.svg"
+                alt="cross"
+                class="removeBtn"
+              />
             </li>
           </ul>
+
           <div class="controlCenter flex flex-ai-c flex-jc-sb">
-            <p>5 items left</p>
+            <p id="counter">5 items left</p>
             <div class="category flex flex-ai-c">
               <p>All</p>
               <p>Active</p>
@@ -44,9 +52,15 @@
           </div>
         </div>
 
+        <div class="category mobile-category flex flex-jc-c flex-ai-c">
+          <p>All</p>
+          <p>Active</p>
+          <p>Completed</p>
+        </div>
+
         <p>Drag and drop to reorder list</p>
       </section>
     </main>
   </body>
-  <script src="./app/js/main.js"></script>
+  <script type="module" src="./app/js/main.js"></script>
 </html>

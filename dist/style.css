@@ -7,6 +7,7 @@ html {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  overflow-x: hidden;
 }
 
 *,
@@ -89,6 +90,21 @@ ul {
   padding: 40px;
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 48px 22px;
+  }
+  .bg {
+    content: url(../../images/bg-mobile-light.jpg);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .bg {
+    content: url(../../images/bg-desktop-light.jpg);
+  }
+}
+
 .data {
   max-width: 540px;
   width: 100%;
@@ -122,7 +138,16 @@ ul {
           box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
+.data__create-dark {
+  background-color: #25273c;
+}
+
+.data__create-dark input {
+  color: #cacde8 !important;
+}
+
 .data__create input {
+  background: transparent;
   width: 85%;
   border: none;
   font-size: 18px;
@@ -162,6 +187,18 @@ ul {
           box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
+.data__list-dark {
+  background-color: #25273c;
+}
+
+.data__list-dark h2 {
+  color: #cacde8 !important;
+}
+
+.data__list-dark li {
+  border-color: rgba(255, 255, 255, 0.192) !important;
+}
+
 .data__list ul {
   height: 390px;
   overflow: hidden;
@@ -179,9 +216,17 @@ ul {
   font-weight: 400;
 }
 
+.data__list li h2:hover {
+  cursor: pointer;
+}
+
 .controlCenter {
   padding: 20px 24px;
   border-top: 1px solid #e4e5f1;
+}
+
+.controlCenter-dark {
+  border-color: rgba(255, 255, 255, 0.192) !important;
 }
 
 .controlCenter p {
@@ -206,6 +251,28 @@ ul {
   cursor: pointer;
 }
 
+.mobile-category {
+  display: none;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 48px;
+  background-color: white;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.mobile-category-dark {
+  background-color: #25273c;
+}
+
+.mobile-category p:first-child {
+  color: #3a7bfd;
+}
+
+.mobile-category p:not(:last-child) {
+  margin-right: 20px;
+}
+
 .checkBox {
   margin-right: 24px;
   position: relative;
@@ -213,6 +280,10 @@ ul {
   border: 2px solid #e4e5f1;
   width: 25px;
   height: 25px;
+}
+
+.checkBox-dark {
+  border-color: #777a92 !important;
 }
 
 .checkBox img {
@@ -235,5 +306,72 @@ ul {
 
 .checkBox:hover {
   cursor: pointer;
+}
+
+.removeBtn {
+  display: none;
+}
+
+.removeBtn:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .data__header {
+    margin-bottom: 40px;
+  }
+  .data__header h1 {
+    font-size: 30px;
+  }
+  .data__header img {
+    height: 20px;
+  }
+  .data__create {
+    padding: 16px 20px;
+  }
+  .data__create input {
+    font-size: 14px;
+  }
+  .data__create input::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .data__create input:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .data__create input::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .data__create input::placeholder {
+    font-size: 14px;
+  }
+  .data__list ul {
+    height: 320px;
+  }
+  .data__list li {
+    padding: 16px 20px;
+  }
+  .data__list li h2 {
+    font-size: 14px;
+  }
+  .controlCenter .category {
+    display: none;
+  }
+  .mobile-category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .checkBox {
+    height: 20px;
+    width: 20px;
+  }
+  .removeBtn {
+    display: block;
+    width: 10px;
+  }
+}
+
+.data__list li:hover .removeBtn {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
