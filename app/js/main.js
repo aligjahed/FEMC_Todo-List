@@ -27,7 +27,10 @@ let completedOnly = "";
 let activeOnly = "";
 
 // Adding Sorting Functionality using Sortable Lobrary
-let sortable = Sortable.create(list);
+let sortable = new Sortable(list, {
+  handle: ".handle",
+  animation: 150,
+});
 
 // Reload Page when
 logo.addEventListener("click", () => {
@@ -209,7 +212,7 @@ const addElement = (req) => {
     <div class="checkBox checkBtn">
     <img src="./images/icon-check.svg" alt="check" />
     </div>
-    <h2>${req}</h2>
+    <h2 class="handle">${req}</h2>
     </div>
     <img
     src="./images/icon-cross.svg"
