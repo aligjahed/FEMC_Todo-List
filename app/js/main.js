@@ -52,15 +52,15 @@ setCounter();
 window.onresize = () => {
   if (currentMode == "light") {
     if (window.innerWidth < 1000) {
-      background.style.content = "url(../../images/bg-mobile-light.jpg)";
+      background.style.content = "url(./images/bg-mobile-light.jpg)";
     } else {
-      background.style.content = "url(../../images/bg-desktop-light.jpg)";
+      background.style.content = "url(./images/bg-desktop-light.jpg)";
     }
   } else {
     if (window.innerWidth < 1000) {
-      background.style.content = "url(../../images/bg-mobile-dark.jpg)";
+      background.style.content = "url(./images/bg-mobile-dark.jpg)";
     } else {
-      background.style.content = "url(../../images/bg-desktop-dark.jpg)";
+      background.style.content = "url(./images/bg-desktop-dark.jpg)";
     }
   }
 };
