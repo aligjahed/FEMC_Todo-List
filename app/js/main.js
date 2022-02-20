@@ -145,14 +145,29 @@ const lightMode = () => {
   }
 };
 
-if (
-  localStorage.getItem("mode") !== "" &&
-  localStorage.getItem("mode") !== undefined
-) {
-  currentMode = localStorage.getItem("mode");
-  console.log(currentMode);
-  setMode();
-}
+window.addEventListener("load", () => {
+  if (
+    localStorage.getItem("mode") !== "" &&
+    localStorage.getItem("mode") !== undefined
+  ) {
+    currentMode = localStorage.getItem("mode");
+    setMode();
+  } else {
+    if (currentMode == "light") {
+      if (window.innerWidth < 1000) {
+        background.style.content = "url(./images/bg-mobile-light.jpg)";
+      } else {
+        background.style.content = "url(./images/bg-desktop-light.jpg)";
+      }
+    } else {
+      if (window.innerWidth < 1000) {
+        background.style.content = "url(./images/bg-mobile-light.jpg)";
+      } else {
+        background.style.content = "url(./images/bg-desktop-light.jpg)";
+      }
+    }
+  }
+});
 
 // Make New Task
 const createTodo = () => {
