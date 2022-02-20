@@ -115,9 +115,9 @@ const darkMode = () => {
   mobileCategory.classList.add("mobile-category-dark");
 
   if (window.innerWidth < 1000) {
-    background.style.content = "url(../../images/bg-mobile-dark.jpg)";
+    background.style.content = "url(./images/bg-mobile-dark.jpg)";
   } else {
-    background.style.content = "url(../../images/bg-desktop-dark.jpg)";
+    background.style.content = "url(./images/bg-desktop-dark.jpg)";
   }
 };
 
@@ -139,9 +139,9 @@ const lightMode = () => {
   mobileCategory.classList.remove("mobile-category-dark");
 
   if (window.innerWidth < 1000) {
-    background.style.content = "url(../../images/bg-mobile-light.jpg)";
+    background.style.content = "url(./images/bg-mobile-light.jpg)";
   } else {
-    background.style.content = "url(../../images/bg-desktop-light.jpg)";
+    background.style.content = "url(./images/bg-desktop-light.jpg)";
   }
 };
 
