@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/to-do-list-w.png"
+      type="image/x-icon"
+    />
     <title>Todo</title>
   </head>
   <body>
@@ -11,12 +16,16 @@
     <main class="container flex flex-jc-c">
       <section class="data flex flex-jc-c flex-column">
         <div class="data__header flex flex-jc-sb flex-ai-c">
-          <h1>TODO</h1>
+          <h1 id="logo">TODO</h1>
           <img src="./images/icon-moon.svg" alt="moon-icon" class="mood-icon" />
         </div>
         <div class="data__create flex flex-ai-c">
           <div class="checkBox" id="createTodo">
-            <img src="./images/icon-check.svg" alt="check" />
+            <img
+              src="./images/icon-check.svg"
+              alt="check"
+              class="createCheck"
+            />
           </div>
           <input
             type="text"
@@ -26,9 +35,9 @@
         </div>
         <div class="data__list">
           <ul class="todo-list">
-            <li class="flex flex-ai-c flex-jc-sb">
+            <li class="flex flex-ai-c flex-jc-sb active">
               <div class="todoObject flex flex-ai-c">
-                <div class="checkBox">
+                <div class="checkBox checkBtn">
                   <img src="./images/icon-check.svg" alt="check" />
                 </div>
                 <h2>Welcome to todo list :)</h2>
@@ -44,18 +53,18 @@
           <div class="controlCenter flex flex-ai-c flex-jc-sb">
             <p id="counter">5 items left</p>
             <div class="category flex flex-ai-c">
-              <p>All</p>
-              <p>Active</p>
-              <p>Completed</p>
+              <p class="allSel">All</p>
+              <p class="activeSel">Active</p>
+              <p class="completedSel">Completed</p>
             </div>
-            <p>Clear Completed</p>
+            <p id="clearCompleted">Clear Completed</p>
           </div>
         </div>
 
         <div class="category mobile-category flex flex-jc-c flex-ai-c">
-          <p>All</p>
-          <p>Active</p>
-          <p>Completed</p>
+          <p class="allSel">All</p>
+          <p class="activeSel">Active</p>
+          <p class="completedSel">Completed</p>
         </div>
 
         <p>Drag and drop to reorder list</p>
